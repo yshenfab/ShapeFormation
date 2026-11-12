@@ -1,0 +1,36 @@
+# Generated fixed-density batch world. Do not edit generated copies.
+include "@FORMATION_INCLUDE@"
+include "@MAP_INCLUDE@"
+
+speedup -1
+interval_sim 100
+paused 0
+resolution 0.02
+threads 1
+
+window
+(
+  size [900 900]
+  scale @WINDOW_SCALE@
+  center [0 0]
+  rotate [0 0]
+  show_data 0
+)
+
+floorplan
+(
+  name "empty"
+  size [@ARENA_SIDE@ @ARENA_SIDE@ 0.800]
+  pose [0 0 0 0]
+  bitmap "@EMPTY_BITMAP@"
+)
+
+define flocker pioneer2dx_no_sonar
+(
+  color "black"
+  ctrl "formation"
+  fiducial_return 1
+  fiducial(range_min 0.0 range_max 12.0 range_max_id 12.0 fov 360)
+)
+
+@ROBOT_POSES@

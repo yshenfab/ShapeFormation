@@ -1,0 +1,2 @@
+/usr/bin/ar qc libexperiment_metrics.a CMakeFiles/experiment_metrics.dir/experiment_metrics.cc.o
+/usr/bin/ranlib libexperiment_metrics.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtarget_image_generation.a CMakeFiles/target_image_generation.dir/target_image_generation.cc.o
+/usr/bin/ranlib libtarget_image_generation.a

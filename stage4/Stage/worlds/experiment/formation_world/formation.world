@@ -1,0 +1,41 @@
+include "formation.inc"
+include "map.inc"
+
+speedup -1
+# interval_sim 100 # 100ms between updates
+paused 1
+resolution 0.02 # low resolution gives fast raytracing
+threads 20
+
+# configure the GUI window
+window
+(
+  size [800.000 800.000] # in pixels
+  scale 6.150 # pixels per meter
+  center [0.000 0.000]
+  rotate [0.000 0.000]
+  show_data 0
+)
+
+floorplan
+(
+  name "empty"
+  size [51.000 51.000 5.000] # related to xbound, ybound
+  pose [0 0 0 0]
+  bitmap "bitmaps/empty.png"
+)
+
+define flocker pioneer2dx_front_sonar
+(
+  color "black"
+  ctrl "formation"
+  fiducial_return 1
+  # fiducial fov in degrees not in radians (stage mannual is wrong!)
+  fiducial(range_min 0.0 range_max 12.00 range_max_id 12.00 fov 360)
+)
+
+flocker(pose [-11.61 41.7 0.0 0.0])
+flocker(pose [-8.29 -4.93 0.0 0.0])
+flocker(pose [24.17 -8.5 0.0 0.0])
+flocker(pose [47.52 29.82 0.0 0.0])
+flocker(pose [-13.78 -15.1 0.0 0.0])

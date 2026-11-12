@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -DNDEBUG -Wall -Wno-deprecated-declarations -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/target_spatial_index_test.dir/tests/target_spatial_index_test.cc.o -o target_spatial_index_test  libtarget_spatial_index.a libconnected_target_generation.a

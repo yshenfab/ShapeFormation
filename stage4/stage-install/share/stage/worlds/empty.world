@@ -1,0 +1,15 @@
+include "map.inc"
+
+# config the GUI window
+window
+(
+  size [700.000 700.000] # in pixels, [width height]
+  scale 41 # pixels per meter, optimal value is window_size/floorplan_size
+)
+
+# load env bitmap and floorplan model (defined in map.inc)
+floorplan
+(
+  bitmap "bitmaps/cave.png"
+  size [15 15 0.5] # size in meters [x y z] [length width height]
+)

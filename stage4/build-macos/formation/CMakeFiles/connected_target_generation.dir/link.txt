@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconnected_target_generation.a CMakeFiles/connected_target_generation.dir/connected_target_generation.cc.o
+/usr/bin/ranlib libconnected_target_generation.a

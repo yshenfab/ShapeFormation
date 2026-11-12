@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtarget_spatial_index.a CMakeFiles/target_spatial_index.dir/target_spatial_index.cc.o
+/usr/bin/ranlib libtarget_spatial_index.a

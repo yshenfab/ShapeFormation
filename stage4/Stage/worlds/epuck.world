@@ -1,0 +1,132 @@
+include "epuck.inc"
+include "map.inc"
+
+# speedup 5
+# interval_sim 100 # 100 miliseconds between updates
+# threads 4 # for multiple CPU cores
+
+window
+( 
+  size [700.000 700.000] # in pixels
+  scale 35
+  show_data 1
+)
+
+# floorplan
+# (
+# 	name "env"
+# 	size [4.000 4.000 1]
+# 	pose [0 0 0 0]
+# 	bitmap "bitmaps/empty.png"
+# )
+
+epuck
+(
+	name "epuck1"
+	pose [0.000 0.000 0.000 0.000]
+	# color "green"
+	# ctrl "pioneer_flocking"
+	# ctrl "wander"
+	# ctrl "ta"
+)
+
+# epuck(name "epuck2" pose [0.5 0.2 0.0 0.0])
+# epuck(name "epuck3" pose [0.0 1.0 0.0 0.0])
+# epuck(name "epuck4" pose [19.21 -1.31 0.0 0.0])
+# epuck(name "epuck5" pose [12.12 9.45 0.0 0.0])
+
+# epuck(name "epuck6" pose [-8.19 -3.2 0.0 0.0])
+# epuck(name "epuck7" pose [15.96 -16.45 0.0 0.0])
+# epuck(name "epuck8" pose [8.69 0.15 0.0 0.0])
+# epuck(name "epuck9" pose [7.45 11.36 0.0 0.0])
+# epuck(name "epuck10" pose [9.3 11.17 0.0 0.0])
+# epuck(name "epuck11" pose [7.61 -8.48 0.0 0.0])
+# epuck(name "epuck12" pose [7.81 -0.42 0.0 0.0])
+# epuck(name "epuck13" pose [-4.09 2.98 0.0 0.0])
+# epuck(name "epuck14" pose [-2.6 1.46 0.0 0.0])
+# epuck(name "epuck15" pose [-17.93 15.98 0.0 0.0])
+# epuck(name "epuck16" pose [-18.5 -13.53 0.0 0.0])
+# epuck(name "epuck17" pose [-6.26 -19.91 0.0 0.0])
+# epuck(name "epuck18" pose [14.41 8.11 0.0 0.0])
+# epuck(name "epuck19" pose [2.37 18.83 0.0 0.0])
+# epuck(name "epuck20" pose [15.64 16.78 0.0 0.0])
+# epuck(name "epuck21" pose [4.01 6.13 0.0 0.0])
+# epuck(name "epuck22" pose [-9.02 -9.42 0.0 0.0])
+# epuck(name "epuck23" pose [12.32 -13.33 0.0 0.0])
+# epuck(name "epuck24" pose [0.82 17.69 0.0 0.0])
+# epuck(name "epuck25" pose [-6.11 -13.3 0.0 0.0])
+# epuck(name "epuck26" pose [-11.67 -15.87 0.0 0.0])
+# epuck(name "epuck27" pose [17.26 17.61 0.0 0.0])
+# epuck(name "epuck28" pose [4.06 -0.59 0.0 0.0])
+# epuck(name "epuck29" pose [-15.68 -17.8 0.0 0.0])
+# epuck(name "epuck30" pose [-9.19 7.21 0.0 0.0])
+# epuck(name "epuck31" pose [-19.05 16.98 0.0 0.0])
+# epuck(name "epuck32" pose [-18.54 -5.78 0.0 0.0])
+# epuck(name "epuck33" pose [18.5 11.18 0.0 0.0])
+# epuck(name "epuck34" pose [-13.44 -9.96 0.0 0.0])
+# epuck(name "epuck35" pose [2.99 15.83 0.0 0.0])
+# epuck(name "epuck36" pose [10.9 -14.03 0.0 0.0])
+# epuck(name "epuck37" pose [13.26 8.7 0.0 0.0])
+# epuck(name "epuck38" pose [5.33 14.83 0.0 0.0])
+# epuck(name "epuck39" pose [1.64 10.03 0.0 0.0])
+# epuck(name "epuck40" pose [0.41 -7.32 0.0 0.0])
+# epuck(name "epuck41" pose [-18.8 -9.63 0.0 0.0])
+# epuck(name "epuck42" pose [10.89 9.2 0.0 0.0])
+# epuck(name "epuck43" pose [2.81 -8.37 0.0 0.0])
+# epuck(name "epuck44" pose [6.52 12.41 0.0 0.0])
+# epuck(name "epuck45" pose [-3.99 19.97 0.0 0.0])
+# epuck(name "epuck46" pose [1.68 -17.61 0.0 0.0])
+# epuck(name "epuck47" pose [-1.18 -19.85 0.0 0.0])
+# epuck(name "epuck48" pose [-6.93 1.21 0.0 0.0])
+# epuck(name "epuck49" pose [-4.51 14.77 0.0 0.0])
+# epuck(name "epuck50" pose [-1.39 -9.11 0.0 0.0])
+# epuck(name "epuck51" pose [3.31 -2.26 0.0 0.0])
+# epuck(name "epuck52" pose [-12.22 -9.72 0.0 0.0])
+# epuck(name "epuck53" pose [12.48 -2.12 0.0 0.0])
+# epuck(name "epuck54" pose [-9.23 -19.46 0.0 0.0])
+# epuck(name "epuck55" pose [-9.39 -9.76 0.0 0.0])
+# epuck(name "epuck56" pose [-18.14 1.45 0.0 0.0])
+# epuck(name "epuck57" pose [-19.3 -3.77 0.0 0.0])
+# epuck(name "epuck58" pose [-3.68 17.04 0.0 0.0])
+# epuck(name "epuck59" pose [-17.36 -8.98 0.0 0.0])
+# epuck(name "epuck60" pose [-13.46 9.94 0.0 0.0])
+# epuck(name "epuck61" pose [4.63 7.58 0.0 0.0])
+# epuck(name "epuck62" pose [9.63 11.41 0.0 0.0])
+# epuck(name "epuck63" pose [10.05 -3.56 0.0 0.0])
+# epuck(name "epuck64" pose [0.27 -19.51 0.0 0.0])
+# epuck(name "epuck65" pose [-4.62 -3.8 0.0 0.0])
+# epuck(name "epuck66" pose [3.99 -15.01 0.0 0.0])
+# epuck(name "epuck67" pose [6.8 10.11 0.0 0.0])
+# epuck(name "epuck68" pose [-19.45 2.67 0.0 0.0])
+# epuck(name "epuck69" pose [19.49 -6.04 0.0 0.0])
+# epuck(name "epuck70" pose [16.56 9.12 0.0 0.0])
+# epuck(name "epuck71" pose [4.64 -2.84 0.0 0.0])
+# epuck(name "epuck72" pose [-7.8 7.55 0.0 0.0])
+# epuck(name "epuck73" pose [17.76 -11.14 0.0 0.0])
+# epuck(name "epuck74" pose [-16.16 5.95 0.0 0.0])
+# epuck(name "epuck75" pose [7.49 -18.12 0.0 0.0])
+# epuck(name "epuck76" pose [14.56 -1.52 0.0 0.0])
+# epuck(name "epuck77" pose [18.85 4.9 0.0 0.0])
+# epuck(name "epuck78" pose [-4.92 -5.46 0.0 0.0])
+# epuck(name "epuck79" pose [-1.98 -3.77 0.0 0.0])
+# epuck(name "epuck80" pose [-18.49 -15.99 0.0 0.0])
+# epuck(name "epuck81" pose [14.07 5.5 0.0 0.0])
+# epuck(name "epuck82" pose [-8.92 -11.96 0.0 0.0])
+# epuck(name "epuck83" pose [15.09 -2.59 0.0 0.0])
+# epuck(name "epuck84" pose [5.61 9.63 0.0 0.0])
+# epuck(name "epuck85" pose [19.08 12.48 0.0 0.0])
+# epuck(name "epuck86" pose [-14.55 2.71 0.0 0.0])
+# epuck(name "epuck87" pose [-1.65 5.11 0.0 0.0])
+# epuck(name "epuck88" pose [-13.77 3.56 0.0 0.0])
+# epuck(name "epuck89" pose [-1.65 -6.07 0.0 0.0])
+# epuck(name "epuck90" pose [6.39 11.68 0.0 0.0])
+# epuck(name "epuck91" pose [0.25 19.8 0.0 0.0])
+# epuck(name "epuck92" pose [16.91 2.8 0.0 0.0])
+# epuck(name "epuck93" pose [1.84 14.33 0.0 0.0])
+# epuck(name "epuck94" pose [5.68 -5.18 0.0 0.0])
+# epuck(name "epuck95" pose [-15.2 0.89 0.0 0.0])
+# epuck(name "epuck96" pose [14.5 15.69 0.0 0.0])
+# epuck(name "epuck97" pose [12.05 -9.71 0.0 0.0])
+# epuck(name "epuck98" pose [4.3 -19.44 0.0 0.0])
+# epuck(name "epuck99" pose [-10.41 17.58 0.0 0.0])
+# epuck(name "epuck100" pose [18.36 5.69 0.0 0.0])

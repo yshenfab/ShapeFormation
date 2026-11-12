@@ -1,0 +1,14 @@
+prefix="/Users/yang/repos/SSCI2027/code/stage4/stage-install"
+
+Name: stage
+Description: Stage robot simulation program, C++ library and Player plugin - part of the Player Project (http://playerstage.org)
+
+Version: 4.3.0
+
+# please don't add FLTK dependencies here, e.g. libpng, GLU, since
+# these vary by platform. Let FLTK figure this out for itself and thus
+# add the incantations to the flags and libs lines below
+Requires:
+
+Libs: -L${prefix}/lib -lstage  -l-framework Carbon -framework Cocoa -framework ApplicationServices -lz -lfltk_images -lfltk_forms -lfltk_gl -lOpenGL -lfltk -lOpenGL -lOpenGL
+Cflags: -I${prefix}/include/Stage-4.3  -I/opt/homebrew/include -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework

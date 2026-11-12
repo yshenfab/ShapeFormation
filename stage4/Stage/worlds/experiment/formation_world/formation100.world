@@ -1,0 +1,136 @@
+include "formation.inc"
+include "map.inc"
+
+speedup -1
+interval_sim 100 # 100ms between updates
+paused 1
+resolution 0.02 # low resolution gives fast raytracing
+threads 20
+
+# configure the GUI window
+window
+(
+  size [1000.000 1000.000] # in pixels
+  scale 9 # pixels per meter
+  center [0.000 0.000]
+  rotate [0.000 0.000]
+  show_data 0
+)
+
+floorplan
+(
+  name "empty"
+  size [105.000 105.000 5.000]
+  pose [0 0 0 0]
+  bitmap "bitmaps/empty.png"
+)
+
+define flocker pioneer2dx_front_sonar
+(
+  color "black"
+  ctrl "formation"
+  fiducial_return 1
+  # fiducial fov in degrees not in radians (stage mannual is wrong!)
+  fiducial(range_min 0.0 range_max 12.00 range_max_id 12.00 fov 360)
+)
+
+flocker(pose [-1.66 -41.25 0.0 0.0])
+flocker(pose [-26.04 17.29 0.0 0.0])
+flocker(pose [0.19 39.76 0.0 0.0])
+flocker(pose [33.09 -11.61 0.0 0.0])
+flocker(pose [-42.67 -11.45 0.0 0.0])
+flocker(pose [-16.75 -40.83 0.0 0.0])
+flocker(pose [48.53 21.33 0.0 0.0])
+flocker(pose [-11.75 22.61 0.0 0.0])
+flocker(pose [47.4 41.37 0.0 0.0])
+flocker(pose [45.26 -34.34 0.0 0.0])
+flocker(pose [19.33 -18.64 0.0 0.0])
+flocker(pose [-30.99 -18.15 0.0 0.0])
+flocker(pose [4.58 28.03 0.0 0.0])
+flocker(pose [-0.02 21.69 0.0 0.0])
+flocker(pose [-21.32 -27.36 0.0 0.0])
+flocker(pose [6.29 30.56 0.0 0.0])
+flocker(pose [8.73 -43.39 0.0 0.0])
+flocker(pose [-37.92 18.21 0.0 0.0])
+flocker(pose [27.42 -22.52 0.0 0.0])
+flocker(pose [36.3 -5.3 0.0 0.0])
+flocker(pose [49.12 24.87 0.0 0.0])
+flocker(pose [18.02 -15.42 0.0 0.0])
+flocker(pose [-47.27 35.03 0.0 0.0])
+flocker(pose [-38.21 31.02 0.0 0.0])
+flocker(pose [-25.9 -29.31 0.0 0.0])
+flocker(pose [-3.48 -47.82 0.0 0.0])
+flocker(pose [-18.54 42.91 0.0 0.0])
+flocker(pose [44.05 29.41 0.0 0.0])
+flocker(pose [16.77 12.5 0.0 0.0])
+flocker(pose [29.96 -4.67 0.0 0.0])
+flocker(pose [-16.83 -18.46 0.0 0.0])
+flocker(pose [24.24 -37.19 0.0 0.0])
+flocker(pose [8.55 37.81 0.0 0.0])
+flocker(pose [0.51 -25.92 0.0 0.0])
+flocker(pose [-4.23 -15.52 0.0 0.0])
+flocker(pose [21.72 44.04 0.0 0.0])
+flocker(pose [36.84 10.22 0.0 0.0])
+flocker(pose [-23.41 -12.58 0.0 0.0])
+flocker(pose [-45.32 -3.06 0.0 0.0])
+flocker(pose [-40.35 -14.33 0.0 0.0])
+flocker(pose [45.62 11.7 0.0 0.0])
+flocker(pose [-3.66 -35.91 0.0 0.0])
+flocker(pose [21.66 19.62 0.0 0.0])
+flocker(pose [-0.19 8.78 0.0 0.0])
+flocker(pose [-20.37 -18.95 0.0 0.0])
+flocker(pose [-12.58 -47.77 0.0 0.0])
+flocker(pose [-11.4 36.95 0.0 0.0])
+flocker(pose [2.62 -34.15 0.0 0.0])
+flocker(pose [27.14 37.98 0.0 0.0])
+flocker(pose [10.58 -32.26 0.0 0.0])
+flocker(pose [17.02 23.59 0.0 0.0])
+flocker(pose [20.24 41.1 0.0 0.0])
+flocker(pose [-38.48 1.45 0.0 0.0])
+flocker(pose [9.82 28.27 0.0 0.0])
+flocker(pose [11.28 35.13 0.0 0.0])
+flocker(pose [-41.7 -39.38 0.0 0.0])
+flocker(pose [-43.45 -35.69 0.0 0.0])
+flocker(pose [-26.76 -22.71 0.0 0.0])
+flocker(pose [14.0 41.19 0.0 0.0])
+flocker(pose [-30.29 24.82 0.0 0.0])
+flocker(pose [-21.46 -35.08 0.0 0.0])
+flocker(pose [-34.69 11.33 0.0 0.0])
+flocker(pose [19.82 -48.61 0.0 0.0])
+flocker(pose [-44.6 -40.23 0.0 0.0])
+flocker(pose [16.45 -19.85 0.0 0.0])
+flocker(pose [-12.49 7.33 0.0 0.0])
+flocker(pose [19.72 15.26 0.0 0.0])
+flocker(pose [40.42 24.85 0.0 0.0])
+flocker(pose [28.97 43.23 0.0 0.0])
+flocker(pose [-26.19 -35.17 0.0 0.0])
+flocker(pose [21.9 -0.95 0.0 0.0])
+flocker(pose [14.37 20.22 0.0 0.0])
+flocker(pose [22.28 -20.0 0.0 0.0])
+flocker(pose [8.24 34.51 0.0 0.0])
+flocker(pose [5.08 34.5 0.0 0.0])
+flocker(pose [-3.44 40.03 0.0 0.0])
+flocker(pose [-0.45 -48.54 0.0 0.0])
+flocker(pose [20.23 -24.17 0.0 0.0])
+flocker(pose [-10.27 11.31 0.0 0.0])
+flocker(pose [-26.19 42.58 0.0 0.0])
+flocker(pose [17.23 31.64 0.0 0.0])
+flocker(pose [-3.94 -20.9 0.0 0.0])
+flocker(pose [-40.47 -42.32 0.0 0.0])
+flocker(pose [15.77 -25.12 0.0 0.0])
+flocker(pose [33.33 6.47 0.0 0.0])
+flocker(pose [19.92 22.68 0.0 0.0])
+flocker(pose [28.9 -48.33 0.0 0.0])
+flocker(pose [-43.97 -32.34 0.0 0.0])
+flocker(pose [-12.58 -44.64 0.0 0.0])
+flocker(pose [-10.36 -13.34 0.0 0.0])
+flocker(pose [-11.94 -32.73 0.0 0.0])
+flocker(pose [11.85 -14.92 0.0 0.0])
+flocker(pose [-45.87 -13.79 0.0 0.0])
+flocker(pose [9.8 18.03 0.0 0.0])
+flocker(pose [-40.75 20.54 0.0 0.0])
+flocker(pose [-13.98 14.26 0.0 0.0])
+flocker(pose [8.74 -22.84 0.0 0.0])
+flocker(pose [-45.43 -7.44 0.0 0.0])
+flocker(pose [12.99 45.94 0.0 0.0])
+flocker(pose [11.27 3.65 0.0 0.0])

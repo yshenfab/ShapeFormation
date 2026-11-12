@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/yang/repos/SSCI2027/code/stage4/build-macos/cmake_install.cmake",
+		"/Users/yang/repos/SSCI2027/code/stage4/build-macos/libstage/cmake_install.cmake",
+		"/Users/yang/repos/SSCI2027/code/stage4/build-macos/worlds/cmake_install.cmake",
+		"/Users/yang/repos/SSCI2027/code/stage4/build-macos/worlds/benchmark/cmake_install.cmake",
+		"/Users/yang/repos/SSCI2027/code/stage4/build-macos/worlds/bitmaps/cmake_install.cmake",
+		"/Users/yang/repos/SSCI2027/code/stage4/build-macos/worlds/wifi/cmake_install.cmake",
+		"/Users/yang/repos/SSCI2027/code/stage4/build-macos/formation/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libexperiment_config.a CMakeFiles/experiment_config.dir/experiment_config.cc.o
+/usr/bin/ranlib libexperiment_config.a

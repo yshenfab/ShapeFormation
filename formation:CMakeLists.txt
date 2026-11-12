@@ -1,0 +1,31 @@
+# adding opencv
+cmake_minimum_required(VERSION 3.15)
+add_compile_options(-std=c++11)
+find_package(OpenCV REQUIRED)
+set(OpenCV_DIR /usr/local/Cellar/opencv/4.5.4_2/lib/cmake/opencv4/)
+include_directories(${OpenCV_INCLUDE_DIRS})
+# target_link_libraries(stage ${OpenCV_LIBS})
+
+# original cmakelists file
+SET( PLUGINS
+  formation
+)
+
+# create a library module for each plugin and link libstage to each
+foreach( PLUGIN ${PLUGINS} )
+  ADD_LIBRARY( ${PLUGIN} MODULE ${PLUGIN}.cc)
+endforeach( PLUGIN )
+
+set_source_files_properties( ${PLUGINS} PROPERTIES 
+  COMPILE_FLAGS "${FLTK_CFLAGS}" 
+)
+
+foreach( PLUGIN ${PLUGINS} )
+  TARGET_LINK_LIBRARIES( ${PLUGIN} stage ${OPENGL_LIBRARIES} ${OpenCV_LIBS})
+endforeach( PLUGIN )
+
+# delete the "lib" prefix from the plugin libraries
+SET_TARGET_PROPERTIES( ${PLUGINS} PROPERTIES PREFIX "" )
+
+# install in <prefix>/lib
+install( TARGETS ${PLUGINS} DESTINATION ${PROJECT_PLUGIN_DIR})
